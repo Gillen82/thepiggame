@@ -1,0 +1,165 @@
+/* Import Site Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Expanded&family=Ultra&display=swap');
+
+/**** Site Fonts ****
+
+    Headings: 'Ultra', serif;
+    Body: 'Stint Ultra Expanded', cursive;
+
+***********************/
+
+/**** Site Colours ****
+
+    Pink:      #fdd7e4
+    Deep Pink: #ff0080
+    Green:     #72B078
+
+***********************/
+
+/* Global Styles */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	/* font-family: 'Ultra', serif; */
+	letter-spacing: 3px;
+	color: #b08493;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	line-height: 1.5;
+	background: linear-gradient(#fdd7e4, #b08493);
+	font-family: 'Stint Ultra Expanded', cursive;
+}
+
+.main-header {
+	text-align: center;
+	padding: 20px;
+}
+
+.main {
+	height: 80%;
+}
+
+.player-flex {
+	width: 80%;
+	height: 100%;
+	margin: auto;
+	display: flex;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 0 0.8rem #b08493;
+	position: relative;
+}
+
+.player {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 60px 0 0;
+}
+
+.player-active {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.name {
+	margin-bottom: 20px;
+	color: #72b078;
+}
+
+.score {
+	font-size: 4rem;
+	color: #ff0040;
+}
+
+.current {
+	position: absolute;
+	bottom: 60px;
+	text-align: center;
+	background-color: #ff0040;
+	padding: 20px 10px;
+	border-radius: 10px;
+	color: #fff;
+}
+
+.current-label {
+	font-size: 1.2rem;
+}
+
+.current-score {
+	font-size: 2rem;
+}
+
+.die {
+	width: 200px;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 0 0.8rem #b08493;
+}
+
+.btn {
+	width: 150px;
+	height: 50px;
+	padding: 5px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 10px;
+	border: 1px solid #ff0040;
+	font-size: 1rem;
+	color: #ff0040;
+	transition: all 0.2s ease;
+}
+
+.btn::first-letter {
+	font-size: 1rem;
+}
+
+.btn:hover {
+	cursor: pointer;
+	background-color: #72b078;
+	color: #fff;
+	border-color: #fff;
+}
+
+.btn-roll {
+	bottom: 90px;
+}
+
+.btn-hold {
+	bottom: 20px;
+}
+
+.btn-reset {
+	top: 20px;
+}
+
+.hidden {
+	display: none;
+}
+
+.winner {
+	background: #333;
+}

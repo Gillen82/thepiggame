@@ -1,0 +1,70 @@
+@media screen and (min-width: 360px) and (max-width: 767px) {
+	.main-header h1 {
+		font-size: 1.3rem;
+	}
+
+	.main {
+		height: 100%;
+	}
+
+	.player-flex {
+		width: 100%;
+		height: 85%;
+		box-shadow: none;
+		border-radius: 0;
+	}
+
+	.player {
+		padding: 100px 0 0;
+	}
+
+	.current {
+		bottom: 100px;
+	}
+
+	.die {
+		width: 100px;
+	}
+
+	.btn {
+		width: 30%;
+		height: 50px;
+	}
+
+	.btn-roll {
+		bottom: 20px;
+		left: 25%;
+	}
+
+	.btn-hold {
+		bottom: 20px;
+		left: 75%;
+	}
+
+	.btn-reset {
+		top: 20px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.die {
+		width: 150px;
+	}
+
+	.btn {
+		width: 20%;
+		height: 50px;
+	}
+
+	.btn-roll {
+		bottom: 80px;
+	}
+
+	.btn-hold {
+		bottom: 20px;
+	}
+
+	.btn-reset {
+		top: 20px;
+	}
+}

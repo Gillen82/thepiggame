@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/styles.css" />
+		<link rel="stylesheet" href="./css/media-queries.css" />
+		<title>The Pig Game</title>
+	</head>
+	<body>
+		<main class="main">
+			<header class="main-header">
+				<h1>The Pig Game</h1>
+			</header>
+
+			<div class="player-flex">
+				<section class="player player0 player-active">
+					<h2 class="name" id="name0">Player 1</h2>
+					<p class="score" id="score0">0</p>
+
+					<div class="current">
+						<p class="current-label">Current</p>
+						<p class="current-score current0">0</p>
+					</div>
+				</section>
+
+				<section class="player player1">
+					<h2 class="name" id="name1">Player 2</h2>
+					<p class="score" id="score1">0</p>
+
+					<div class="current">
+						<p class="current-label">Current</p>
+						<p class="current-score current1">0</p>
+					</div>
+				</section>
+
+				<img src="./images/dice-5.png" alt="dice" class="die" />
+				<button class="btn btn-roll">🎲 Roll</button>
+				<button class="btn btn-hold">✋ Hold</button>
+				<button class="btn btn-reset">♻ Reset</button>
+			</div>
+		</main>
+		<script src="./js/index.js"></script>
+	</body>
+</html>
