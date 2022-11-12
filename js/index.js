@@ -15,6 +15,37 @@ const btnRoll = document.querySelector('.btn-roll');
 const btnHold = document.querySelector('.btn-hold');
 const btnCloseModal = document.querySelector('.btn-close-modal');
 const btnShowModal = document.querySelector('.btn-show-modal');
+const btnPlayMusic = document.querySelector('.btn-play-music');
+
+// Audio
+const music = new Audio('../audio/muisc.wav');
+const pigGrunt = new Audio('../audio/pig-grunt.wav');
+const bankPoints = new Audio('../audio/bank-points.wav');
+const diceRoll = new Audio('../audio/dice-roll.wav');
+const winner = new Audio('../audio/winner.wav');
+
+// Fix audio volume
+music.volume = 0.5;
+bankPoints.volume = 0.5;
+winner.volume = 0.5;
+
+// Play main music
+music.play();
+
+// Loop main Music
+music.addEventListener(
+	'ended',
+	() => {
+		music.currentTime = 0;
+		music.play();
+	},
+	false
+);
+
+// Mute/Unmute music
+btnPlayMusic.addEventListener('click', () => {
+	music.volume = music.volume === 0.5 ? 0 : 0.5;
+});
 
 // Close Modal
 btnCloseModal.addEventListener('click', () => {
@@ -77,10 +108,12 @@ btnRoll.addEventListener('click', () => {
 		die.src = `images/dice-${dice}.png`;
 
 		if (dice !== 1) {
+			diceRoll.play();
 			currentScore += dice;
 			document.querySelector(`.current${activePlayer}`).textContent =
 				currentScore;
 		} else {
+			pigGrunt.play();
 			changePlayer();
 		}
 	}
@@ -89,11 +122,13 @@ btnRoll.addEventListener('click', () => {
 // Hold Current Score
 btnHold.addEventListener('click', () => {
 	if (playing) {
+		bankPoints.play();
 		scores[activePlayer] += currentScore;
 		document.querySelector(`#score${activePlayer}`).textContent =
 			scores[activePlayer];
 
 		if (scores[activePlayer] >= 100) {
+			winner.play();
 			playing = false;
 			player0.classList.remove('activePlayer');
 			player1.classList.remove('activePlayer');

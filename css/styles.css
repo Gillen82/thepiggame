@@ -71,26 +71,6 @@ body {
 	overflow-y: scroll;
 }
 
-.btn-close-modal,
-.btn-show-modal {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	width: 30px;
-	height: 30px;
-	background-color: #b08493;
-	color: #fdd7e4;
-	border: none;
-	transition: all 0.2s ease-in-out;
-}
-
-.btn-close-modal:hover,
-.btn-show-modal:hover {
-	background-color: #ff0040;
-	color: #fff;
-	cursor: pointer;
-}
-
 .modal-title {
 	margin-bottom: 20px;
 	text-align: center;
@@ -183,6 +163,42 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	box-shadow: 0 0 0.8rem #b08493;
+}
+
+/* Buttons */
+.btn-close-modal,
+.btn-show-modal {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 30px;
+	height: 30px;
+	background-color: #b08493;
+	color: #fdd7e4;
+	border: none;
+	transition: all 0.2s ease-in-out;
+}
+
+.btn-close-modal:hover,
+.btn-show-modal:hover {
+	background-color: #ff0040;
+	color: #fff;
+	cursor: pointer;
+}
+
+.btn-play-music {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 40px;
+	height: 40px;
+	border: none;
+	transition: all 0.2s ease-in-out;
+}
+
+.btn-play-music:hover {
+	background-color: #ff0040;
+	cursor: pointer;
 }
 
 .btn {
