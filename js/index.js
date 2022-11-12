@@ -18,11 +18,11 @@ const btnShowModal = document.querySelector('.btn-show-modal');
 const btnPlayMusic = document.querySelector('.btn-play-music');
 
 // Audio
-const music = new Audio('../audio/muisc.wav');
-const pigGrunt = new Audio('../audio/pig-grunt.wav');
-const bankPoints = new Audio('../audio/bank-points.wav');
-const diceRoll = new Audio('../audio/dice-roll.wav');
-const winner = new Audio('../audio/winner.wav');
+const music = new Audio('audio/muisc.wav');
+const pigGrunt = new Audio('audio/pig-grunt.wav');
+const bankPoints = new Audio('audio/bank-points.wav');
+const diceRoll = new Audio('audio/dice-roll.wav');
+const winner = new Audio('audio/winner.wav');
 
 // Fix audio volume
 music.volume = 0.5;
