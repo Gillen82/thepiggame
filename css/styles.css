@@ -47,9 +47,75 @@ body {
 	font-family: 'Stint Ultra Expanded', cursive;
 }
 
+/* Modal */
+.modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 10;
+}
+
+.modal-window {
+	width: 50%;
+	height: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	border-radius: 20px;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+.btn-close-modal,
+.btn-show-modal {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 30px;
+	height: 30px;
+	background-color: #b08493;
+	color: #fdd7e4;
+	border: none;
+	transition: all 0.2s ease-in-out;
+}
+
+.btn-close-modal:hover,
+.btn-show-modal:hover {
+	background-color: #ff0040;
+	color: #fff;
+	cursor: pointer;
+}
+
+.modal-title {
+	margin-bottom: 20px;
+	text-align: center;
+	background-color: #b08493;
+	color: #fff;
+	padding: 20px 0;
+	box-shadow: 0 0 3px #000;
+}
+
 .main-header {
 	text-align: center;
 	padding: 20px;
+}
+
+.modal-heading {
+	margin: 0 0 20px 50px;
+}
+
+.game-rules {
+	padding: 0 50px;
+	margin-bottom: 50px;
+}
+
+.rule {
+	margin-bottom: 10px;
 }
 
 .main {
@@ -162,4 +228,15 @@ body {
 
 .winner {
 	background: #333;
+}
+
+.blur {
+	filter: blur(2px) grayscale(1);
+	transition: all 0.5s ease;
+}
+
+.close-modal {
+	opacity: 0;
+	z-index: -10;
+	transition: all 0.2s ease;
 }

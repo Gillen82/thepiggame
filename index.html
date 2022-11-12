@@ -9,7 +9,38 @@
 		<title>The Pig Game</title>
 	</head>
 	<body>
-		<main class="main">
+		<div class="modal">
+			<div class="modal-window">
+				<header class="modal-header">
+					<h2 class="modal-title">The Pig Game</h2>
+				</header>
+				<h3 class="modal-heading">Game Rules</h3>
+				<ol class="game-rules">
+					<li class="rule">Players take turns with a die.</li>
+					<li class="rule">
+						On a player's turn he/she can roll a die as many times as they like.
+					</li>
+					<li class="rule">
+						If a roll is a 2, 3, 4, 5, or 6, the player adds that many points to
+						their 'Current Score' for the turn.
+					</li>
+					<li class="rule">
+						A player may choose to end their turn at any time and "bank" their
+						points by clicking the 'Hold' button.
+					</li>
+					<li class="rule">
+						If a player rolls a 1, they lose all their unbanked points and their
+						turn is over.
+					</li>
+					<li>The first player to reach 100 points or more wins.</li>
+				</ol>
+			</div>
+			<button class="btn-close-modal">X</button>
+		</div>
+
+		<!-- Main Game -->
+		<main class="main blur">
+			<button class="btn-show-modal">?</button>
 			<header class="main-header">
 				<h1>The Pig Game</h1>
 			</header>

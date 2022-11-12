@@ -1,6 +1,8 @@
 'use strict';
 
 // Select Game Elements
+const modal = document.querySelector('.modal');
+const main = document.querySelector('.main');
 const player0 = document.querySelector('.player0');
 const player1 = document.querySelector('.player1');
 const score0 = document.querySelector('#score0');
@@ -11,6 +13,20 @@ const die = document.querySelector('.die');
 const btnReset = document.querySelector('.btn-reset');
 const btnRoll = document.querySelector('.btn-roll');
 const btnHold = document.querySelector('.btn-hold');
+const btnCloseModal = document.querySelector('.btn-close-modal');
+const btnShowModal = document.querySelector('.btn-show-modal');
+
+// Close Modal
+btnCloseModal.addEventListener('click', () => {
+	modal.classList.add('close-modal');
+	main.classList.remove('blur');
+});
+
+// Show Modal
+btnShowModal.addEventListener('click', () => {
+	modal.classList.remove('close-modal');
+	main.classList.add('blur');
+});
 
 // Set Variables
 let scores, currentScore, activePlayer, playing;
