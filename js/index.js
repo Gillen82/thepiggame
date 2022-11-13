@@ -29,9 +29,6 @@ music.volume = 0.5;
 bankPoints.volume = 0.5;
 winner.volume = 0.5;
 
-// Play main music
-music.play();
-
 // Loop main Music
 music.addEventListener(
 	'ended',
@@ -42,9 +39,14 @@ music.addEventListener(
 	false
 );
 
-// Mute/Unmute music
+// Play/Stop music
 btnPlayMusic.addEventListener('click', () => {
-	music.volume = music.volume === 0.5 ? 0 : 0.5;
+	if (music.paused) {
+		music.play();
+	} else {
+		music.pause();
+		music.currentTime = 0;
+	}
 });
 
 // Close Modal
